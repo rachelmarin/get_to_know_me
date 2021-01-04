@@ -1,0 +1,9 @@
+<h3 class="purple-text text-darken-3">Sign Profile List</h3>
+
+<p>Recently Viewed: <%= @sign ? @sign.name : "Haven't viewed any signs." %></p>
+
+<ul>
+  <% @signs.each do |sign| %>
+    <li><a href="/signs/<%= sign.id %>"><%= sign.name %></a></li>
+  <% end %>
+</ul>
