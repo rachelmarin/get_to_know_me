@@ -1,0 +1,13 @@
+<h3 class="purple-text text-darken-3"><%= @sign.name %></h3>
+<p>Birth Date: <%= @sign.date_of_birth %></p>
+<p>Astrological Zodiac Sign: <%= @sign.zodiac_sign %></p>
+<p>Chinese Zodiac Sign: <%= @sign.date_of_birth.chinese_zodiac_sign %></p>
+<p>Birthstone: <%= @sign.birthstone %></p>
+
+
+
+<form action="/signs/<%= @sign.id %>" method="post">
+  <a href="/signs/<%= @sign.id %>/edit" class="btn-small blue deep-purple darken-4 pink-lighten-4-text">Edit</a>  
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete sign" class="btn-small blue lighten-2 pink-lighten-4-text">
+</form>
