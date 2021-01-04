@@ -1,0 +1,21 @@
+<h2 class="purple-text lighten-3">Edit <%= @sign.name %></h2>
+
+<form action="/signs/<%= @sign.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <div class="input-field">
+    <input id="name" name="sign[name]" type="text" class="validate" value="<%= @sign.name %>">
+    <label for="name">Name</label>
+  </div>
+  <div class="input-field">
+    <input type="text" class="datepicker" name="sign[date_of_birth]" id="date_of_birth" value="<%= @sign.date_of_birth %>">
+    <label for="date_of_birth">Birth Date</label>
+  </div>
+
+  <input type="submit" value="Update Sign Profile" class="btn Purple lighten-3">
+</form>
+
+<script>
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
