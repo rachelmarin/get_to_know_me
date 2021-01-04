@@ -5,4 +5,3 @@ class Sign < ActiveRecord::Base
   
     
   end
-  fasefbr
