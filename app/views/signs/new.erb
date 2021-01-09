@@ -1,6 +1,7 @@
 <h2 class="purple-text lighten-3">Create A Sign Profile</h2>
 
 <form action="/signs" method="post">
+  <input type="hidden" name="sign[user_id]" value="<%= current_user.id%>">
   <div class="input-field">
     <input id="name" name="sign[name]" type="text" class="validate">
     <label for="name">First & Last Name</label>
