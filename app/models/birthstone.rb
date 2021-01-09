@@ -1,4 +1,6 @@
 class Birthstone < ActiveRecord::Base
+#create birthstone
+
     # require 'date'
 end
 #     belongs_to :signs
