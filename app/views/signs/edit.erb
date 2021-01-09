@@ -2,6 +2,7 @@
 
 <form action="/signs/<%= @sign.id %>" method="post">
   <input type="hidden" name="_method" value="patch">
+ <input type="hidden" name="sign[user_id]" value="<%= current_user.id%>"> 
   <div class="input-field">
     <input id="name" name="sign[name]" type="text" class="validate" value="<%= @sign.name %>">
     <label for="name">Name</label>
