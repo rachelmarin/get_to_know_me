@@ -11,7 +11,6 @@ class ApplicationController < Sinatra::Base
   
 
   get "/" do
-    redirect_if_logged_in
     erb :welcome
   end
 
@@ -33,6 +32,12 @@ class ApplicationController < Sinatra::Base
       def redirect_if_logged_in
         redirect "/signs" if is_logged_in
       end
+
+      def redirect_if_not_owner
+        redirect "/signs" if is_logged_in
+
+      end
+  
 
     end
 
