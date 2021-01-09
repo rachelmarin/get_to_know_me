@@ -6,6 +6,6 @@ end
 
 use Rack::MethodOverride
 
-use SessionController
-use SignController
+use SessionsController
+use SignsController
 run ApplicationController
