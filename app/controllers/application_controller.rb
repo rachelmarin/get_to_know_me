@@ -34,10 +34,8 @@ class ApplicationController < Sinatra::Base
       end
 
       def redirect_if_not_owner
-        redirect "/signs" if is_logged_in
-
+        redirect "/signs" unless current_user.id==@sign.user_id
       end
-  
 
     end
 

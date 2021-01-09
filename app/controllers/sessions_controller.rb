@@ -21,11 +21,11 @@ class SessionsController < ApplicationController
     end
   
     post '/login' do
-      user = User.find_by_username(params[:username])
-     
-      if user && user.authenticate(params[:password])
+      user = User.find_by_username(params[:user][:username])
+      current_user = user
+      if user && user.authenticate(params[:user][:password])
         session[:user_id] = user.id
-        redirect "/signs"
+        redirect "/signs/#{user.id}"
       else
         redirect "/login"
       end

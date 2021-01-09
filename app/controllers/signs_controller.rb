@@ -22,7 +22,7 @@ class SignsController < ApplicationController
       
       get '/signs/:id/edit' do
         find_sign
-        binding.pry        
+        # binding.pry        
         redirect_if_not_logged_in
         # redirect_if_sign_not_found
         redirect_if_not_owner
@@ -52,6 +52,7 @@ class SignsController < ApplicationController
     
       delete '/signs/:id' do
           find_sign
+          redirect_if_not_owner
           @sign.destroy if @sign
           redirect "/signs"
         end
