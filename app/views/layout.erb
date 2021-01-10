@@ -20,20 +20,28 @@
   <body> 
     <nav class="#ce93d8 purple lighten-3">
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo center">Get To Know Me</a>
+      <a href="/" class="brand-logo center"><b>Get To Know Me</b></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
       <% if !is_logged_in %>
             <li><a href="/login">Login</a></li>
             <li><a href="/signup">Signup</a></li>
           <% else %>
         <li><a href="/logout">Logout</a></li>
-        <li><a href="/signs">My Signs List</a></li>
+        <li><a href="/signs">all Signs List</a></li>
+        <li><a href="/sessions/<%=current_user.id%>">My Signs Profiles</a></li>
         <li><a href="/signs/new">Create Sign Profile</a></li>
        <% end %>
       </ul>
     </div>
   </nav>
     
+    <div style="background-repeat: no-repeat;
+ background-image: url('https://image.freepik.com/free-photo/3d-abstract-space-sky-with-stars-nebula_1048-8320.jpg'); background-attachment: fixed;
+  background-size: 100% 100%;
+">
+          
+          
+          
           <div class="container">
                  <%= yield %>
       </div>
