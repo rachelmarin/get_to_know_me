@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 20210110032424) do
 
   create_table "birthstones", force: :cascade do |t|
-    t.string "bithstone"
-    t.string "birth_month"
+    t.string  "month"
+    t.string  "stone"
+    t.string  "meaning"
+    t.integer "sign_id"
   end
 
   create_table "signs", force: :cascade do |t|
@@ -24,7 +26,6 @@ ActiveRecord::Schema.define(version: 3) do
     t.date    "date_of_birth"
     t.string  "z_s"
     t.string  "c_z_s"
-    t.string  "birthstone"
   end
 
   create_table "users", force: :cascade do |t|
