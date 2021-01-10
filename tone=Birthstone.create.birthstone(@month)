@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/rachel/Development/code/mod2/get_to_know_me/app/controllers/signs_controller.rb:42 self.POST /signs:
+
+    [1;34m37[0m:         @month=params[[33m:sign[0m][[33m:date_of_birth[0m].gsub([31m[1;31m"[0m[31m,[1;31m"[0m[31m[0m,[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m).split[[1;34m0[0m]
+    [1;34m38[0m:         @stone=[1;34;4mBirthstone[0m.create
+    [1;34m39[0m:         @stone.birth_month=@stone.birthstone(@month)
+    [1;34m40[0m:         @stone.signs_id=@sign.id
+    [1;34m41[0m:         [32mif[0m @sign.save
+ => [1;34m42[0m:           binding.pry
+    [1;34m43[0m:           redirect [31m[1;31m'[0m[31m/signs[1;31m'[0m[31m[0m
+    [1;34m44[0m:         [32melse[0m
+    [1;34m45[0m:           redirect [31m[1;31m'[0m[31m/signs/new[1;31m'[0m[31m[0m
+    [1;34m46[0m:         [32mend[0m
+    [1;34m47[0m:       [32mend[0m
+
