@@ -1,47 +1,37 @@
 class Birthstone < ActiveRecord::Base
-    # require 'date'
-end
-#     belongs_to :signs
-  
+belongs_to :sign
+#  attr_accessor :month
 
-#     attr_accessor :month
-
-#     @@all = []
-    
-#         def initialize(month)
-#             @month = month
+    #  def birth_stone(month)
+         
+    #         if month =="Jan"
+    #              stone = "Garnet, Meaning: Protection"
+    #      elsif month =="Feb"
+    #              stone = "Amethyst, Meaning: Wisdom"
+    #      elsif month =="Mar"
+    #              stone = "Aquamarine, Meaning: Serenity "
+    #      elsif month =="Apr"
+    #              stone = "Diamond, Meaning: Strength"
+    #      elsif month =="May"
+    #               stone = "Emerald, Meaning: Hope"
+    #      elsif month =="Jun"
+    #              stone = "Pearl or Alexandrite, Meaning: Love"
+    #      elsif month =="Jul"
+    #              stone = "Ruby, Meaning: Vitality"
+    #      elsif month =="Aug"
+    #              stone = "Peridot, Meaning: Beauty"
+    #      elsif month =="Sep"
+    #              stone = "Sapphire, Meaning: Truth"
+    #      elsif  month =="Oct"
+    #              stone = "Tourmaline, Meaning: Healing"
+    #      elsif month =="Nov"
+    #              stone = "Citrine, Meaning: Joy"
+    #      elsif month == "Dec"
+    #              stone = "Turquoise, Meaning: Friendship"
             
-#         end
-#     end
+    #          end
+    #      return stone
+    #  end
+  
+ end
 
-#         def birth_month(stone)
-#             if month = "January"
-#                 puts "Garnet, Meaning: Protection"
-#             elsif month == "February"
-#                 puts "Amethyst, Meaning: Wisdom"
-#             elsif birth_month == "March"
-#                 puts "Aquamarine, Meaning: Serenity "
-#             elsif birth_month == "April"
-#                 puts "Diamond, Meaning: Strength"
-#             elsif birth_month == "May"
-#                 puts "Emerald, Meaning: Hope"
-#             elsif birth_month == "June"
-#                 puts "Pearl or Alexandrite, Meaning: Love"
-#             elsif birth_month == "July"
-#                 puts "Ruby, Meaning: Vitality"
-#             elsif birth_month == "August"
-#                 puts "Peridot, Meaning: Beauty"
-#             elsif birth_month == "September"
-#                 puts "Sapphire, Meaning: Truth"
-#             elsif birth_month == "October"
-#                 puts "Tourmaline, Meaning: Healing"
-#             elsif birth_month == "November"
-#                 puts "Citrine, Meaning: Joy"
-#             elsif birth_month == "December"
-#                 puts "Turquoise, Meaning: Friendship"
-#             else
-#                 puts "Please enter a birth month."
-#             end
-       
-    
-#    end
