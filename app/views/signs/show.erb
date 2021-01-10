@@ -1,8 +1,8 @@
-<h3 class="purple-text text-darken-3"><%= @sign.name %></h3>
-<p>Birth Date: <%= @sign.date_of_birth %></p>
-<p>Astrological Zodiac Sign: <%= @sign.zodiac_sign %></p>
-<p>Chinese Zodiac Sign: <%= @sign.date_of_birth.chinese_zodiac_sign %></p>
-<p>Birthstone: <%= @sign.birthstone %></p>
+<h3 class="purple-text text-lighten-3"><%= @sign.name %></h3>
+<p class="purple-text text-lighten-5">Birth Date: <%= @sign.date_of_birth %></p>
+<p class="purple-text text-lighten-5">Astrological Zodiac Sign: <%= @sign.zodiac_sign %></p>
+<p class="purple-text text-lighten-5">Chinese Zodiac Sign: <%= @sign.date_of_birth.chinese_zodiac_sign %></p>
+<p class="purple-text text-lighten-5">Birthstone: <%= @birthstone.stone  %>,  <%= @birthstone.meaning %></p> 
 
 
 
@@ -11,3 +11,5 @@
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete sign" class="btn-small blue lighten-2 pink-lighten-4-text">
 </form>
+
+<img src="/images/undraw_counting_stars_rrnl.svg" style="margin: 0; padding: 0;">
