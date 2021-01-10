@@ -15,16 +15,19 @@ class SignsController < ApplicationController
       
       get '/signs/:id' do
         find_sign
+        @birthstone_id=@sign.date_of_birth.to_s.gsub("-"," ").split[1].to_i
+        @birthstone=Birthstone.find_by_id(@birthstone_id)
         session[:sign_id] = @sign.id if @sign
         redirect_if_sign_not_found
+       
         erb :'signs/show'
       end
       
       get '/signs/:id/edit' do
         find_sign
-        # binding.pry        
+        
         redirect_if_not_logged_in
-        # redirect_if_sign_not_found
+        
         redirect_if_not_owner
         erb :'signs/edit'
       end
@@ -32,8 +35,10 @@ class SignsController < ApplicationController
       post '/signs' do
         
         @sign = Sign.new(params[:sign])
-  
+        month
+        find_birthstone
         if @sign.save
+          @birthstone.sign_id=@sign.id
           redirect '/signs'
         else
           redirect '/signs/new'
@@ -49,7 +54,7 @@ class SignsController < ApplicationController
           redirect "/signs/#{@sign.id}/edit"
         end
       end
-    
+      
       delete '/signs/:id' do
           find_sign
           redirect_if_not_owner
@@ -64,5 +69,12 @@ class SignsController < ApplicationController
         
         def redirect_if_sign_not_found
           redirect "/signs" unless @sign
+        end
+        
+        def find_birthstone
+          @birthstone=Birthstone.find_by(month: @month)
+        end
+        def month
+          @month=params[:sign][:date_of_birth].gsub(",","").split[0]
         end
       end
