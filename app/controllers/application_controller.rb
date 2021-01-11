@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
       end
       
       def redirect_if_logged_in
-        redirect "/signs" if is_logged_in
+        redirect "/signs/new" if is_logged_in
       end
 
       def redirect_if_not_owner

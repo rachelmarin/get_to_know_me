@@ -33,7 +33,7 @@ class SessionsController < ApplicationController
 
     get "/sessions/:id" do
       user = User.find_by(id: params[:id])
-      erb :'/sessions/show'
+      erb :'/signs/show'
   end
 
   
