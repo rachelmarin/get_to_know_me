@@ -37,9 +37,6 @@ class ApplicationController < Sinatra::Base
         redirect "/signs" unless current_user.id==@sign.user_id
       end
       
-      def find_birthstone(month)
-        @birthstone=Birthstone.find_by(month: month)
-      end
     end
 
   end
