@@ -19,6 +19,7 @@ class SignsController < ApplicationController
         @birthstone=Birthstone.find_by_id(@birthstone_id)
         session[:sign_id] = @sign.id if @sign
         redirect_if_sign_not_found
+       
         erb :'signs/show'
       end
       
