@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210110032424) do
-
-  create_table "birthstones", force: :cascade do |t|
-    t.string  "month"
-    t.string  "stone"
-    t.string  "meaning"
-    t.integer "sign_id"
-  end
+ActiveRecord::Schema.define(version: 20210110032405) do
 
   create_table "signs", force: :cascade do |t|
     t.integer "user_id"

@@ -16,6 +16,7 @@ class SignsController < ApplicationController
       get '/signs/:id' do
         find_sign
         session[:sign_id] = @sign.id if @sign
+       
         redirect_if_sign_not_found
         erb :'signs/show'
       end

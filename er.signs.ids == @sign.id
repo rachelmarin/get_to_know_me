@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/rachel/Development/code/mod2/get_to_know_me/app/controllers/signs_controller.rb:19 self.GET /signs/:id:
+
+    [1;34m14[0m:       [32mend[0m
+    [1;34m15[0m:       
+    [1;34m16[0m:       get [31m[1;31m'[0m[31m/signs/:id[1;31m'[0m[31m[0m [32mdo[0m
+    [1;34m17[0m:         find_sign
+    [1;34m18[0m:         session[[33m:sign_id[0m] = @sign.id [32mif[0m @sign
+ => [1;34m19[0m:        binding.pry
+    [1;34m20[0m:         redirect_if_sign_not_found
+    [1;34m21[0m:         erb [33m:[1;33m'[0m[33msigns/show[1;33m'[0m[33m[0m
+    [1;34m22[0m:       [32mend[0m
+    [1;34m23[0m:       
+    [1;34m24[0m:       get [31m[1;31m'[0m[31m/signs/:id/edit[1;31m'[0m[31m[0m [32mdo[0m
+
