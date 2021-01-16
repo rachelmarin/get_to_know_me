@@ -21,6 +21,8 @@ This project is supported by Bundler and includes A Gemfile.
 
 Run bundle install before getting started.
 
+Make sure to run shotgun so that you can open in a browser
+
 App Features:
 .Home Page/Welcome
 .Signs Index Page
