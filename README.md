@@ -32,6 +32,8 @@ App Features:
 .Log In
 .Log Out
 
+## Thanks to:
+Enoch Griffith & Jennifer Pazos
 
 
 ## Sources
@@ -45,3 +47,4 @@ License & copyright
 Copyright (c) 2021 Rachel Marin
 
 This app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
