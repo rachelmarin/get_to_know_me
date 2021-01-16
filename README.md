@@ -1,6 +1,9 @@
-Welcome To: Get To Know Me 
+## Welcome To: Get To Know Me 
+Now you can keep track of all your friends and families birthday's, astrological and 
+Chinese zodiac signs! What a wonderful way to get to know more about your loved ones, 
+and never forget a birthday again!
 
-How to clone using the command line
+## How to clone using the command line
 1. On GitHub, navigate to the main page.
 
 2. Above the list of files, click  Code.
@@ -16,7 +19,7 @@ How to clone using the command line
 7. Press Enter to create your local clone.
 
 
-
+## Startup
 This project is supported by Bundler and includes A Gemfile.
 
 Run bundle install before getting started.
