@@ -4,6 +4,8 @@
 <p class="purple-text text-lighten-5">Chinese Zodiac Sign: <%= @sign.date_of_birth.chinese_zodiac_sign %></p> 
 
 
+
+
 <form action="/signs/<%= @sign.id %>" method="post">
   <a href="/signs/<%= @sign.id %>/edit" class="btn-small blue deep-purple darken-4 pink-lighten-4-text">Edit</a>  
   <input type="hidden" name="_method" value="delete">

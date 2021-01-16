@@ -31,9 +31,7 @@ class SignsController < ApplicationController
       end
       
       post '/signs' do
-        
-        @sign = Sign.new(params[:sign])
-    
+       @sign = current_user.signs.build(params[:sign])
         if @sign.save
           redirect '/signs'
         else
@@ -43,6 +41,7 @@ class SignsController < ApplicationController
       
       patch "/signs/:id" do
         find_sign
+        redirect_if_not_owner
         redirect_if_sign_not_found
         if @sign.update(params[:sign])
           redirect "/signs/#{@sign.id}"

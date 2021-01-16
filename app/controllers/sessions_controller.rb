@@ -22,7 +22,6 @@ class SessionsController < ApplicationController
   
     post '/login' do
       user = User.find_by_username(params[:user][:username])
-      current_user = user
       if user && user.authenticate(params[:user][:password])
         session[:user_id] = user.id
         redirect "/signs/#{user.id}"
